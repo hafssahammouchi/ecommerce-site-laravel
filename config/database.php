@@ -16,7 +16,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    // Railway (PORT défini) sans MySQL : forcer SQLite pour la démo. Sinon utiliser DB_CONNECTION.
+    'default' => env('PORT') ? (in_array(env('DB_CONNECTION'), ['mysql', null], true) ? 'sqlite' : env('DB_CONNECTION')) : env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------

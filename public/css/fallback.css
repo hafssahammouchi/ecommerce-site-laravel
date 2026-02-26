@@ -199,6 +199,18 @@ img[data-fallback] { object-fit: cover; }
   outline-offset: 2px;
 }
 
+.auth-page {
+  background: linear-gradient(160deg, var(--color-creme) 0%, #f5f2ef 50%, var(--color-creme) 100%);
+}
+.auth-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+}
+.auth-input::placeholder { color: #9ca3af; }
+.auth-submit:focus-visible {
+  outline: 2px solid var(--color-rose);
+  outline-offset: 2px;
+}
+
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;

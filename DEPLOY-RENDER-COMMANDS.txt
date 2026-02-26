@@ -1,0 +1,20 @@
+# Commandes à exécuter pour déployer sur Render
+
+Ouvrez un terminal (PowerShell ou CMD) dans le dossier du projet, puis exécutez :
+
+1) Ajouter tous les fichiers (Dockerfile, docker/, .dockerignore, RENDER.md, etc.) :
+   git add .
+
+2) Créer le commit :
+   git commit -m "Laravel ready for Render with DB"
+
+3) Si le dépôt GitHub n'existe pas encore :
+   git init
+   git remote add origin https://github.com/VOTRE_UTILISATEUR/VOTRE_REPO.git
+   git branch -M main
+   git push -u origin main
+
+   Si le dépôt existe déjà :
+   git push origin main
+
+Ensuite : Render → New Web Service → Docker → connecter le dépôt → ajouter les variables d'environnement (voir RENDER.md) → Create Web Service.

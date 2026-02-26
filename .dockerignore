@@ -1,0 +1,41 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Dependencies (réinstallés dans le container)
+/node_modules
+/vendor
+
+# Environnement local (Render injecte les variables)
+.env
+.env.*
+!.env.example
+
+# IDE & OS
+.idea
+.vscode
+.nova
+.fleet
+.zed
+*.log
+.DS_Store
+Thumbs.db
+
+# Tests & docs
+/tests
+/phpunit.xml
+.phpunit.result.cache
+*.md
+!README.md
+
+# Build front (optionnel : assets compilés ou CDN)
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+
+# Docker (éviter de copier des contextes inutiles)
+Dockerfile*
+docker-compose*
+.docker
